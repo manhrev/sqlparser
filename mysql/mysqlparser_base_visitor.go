@@ -908,6 +908,10 @@ func (v *BaseMySqlParserVisitor) VisitValuesStatement(ctx *ValuesStatementContex
 	return v.VisitChildren(ctx)
 }
 
+func (v *BaseMySqlParserVisitor) VisitRowConstructor(ctx *RowConstructorContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
 func (v *BaseMySqlParserVisitor) VisitInsertStatementValue(ctx *InsertStatementValueContext) interface{} {
 	return v.VisitChildren(ctx)
 }

@@ -1453,6 +1453,12 @@ func (s *BaseMySqlParserListener) EnterValuesStatement(ctx *ValuesStatementConte
 // ExitValuesStatement is called when production valuesStatement is exited.
 func (s *BaseMySqlParserListener) ExitValuesStatement(ctx *ValuesStatementContext) {}
 
+// EnterRowConstructor is called when production rowConstructor is entered.
+func (s *BaseMySqlParserListener) EnterRowConstructor(ctx *RowConstructorContext) {}
+
+// ExitRowConstructor is called when production rowConstructor is exited.
+func (s *BaseMySqlParserListener) ExitRowConstructor(ctx *RowConstructorContext) {}
+
 // EnterInsertStatementValue is called when production insertStatementValue is entered.
 func (s *BaseMySqlParserListener) EnterInsertStatementValue(ctx *InsertStatementValueContext) {}
 

@@ -860,7 +860,12 @@ updateStatement: singleUpdateStatement | multipleUpdateStatement;
 
 // https://dev.mysql.com/doc/refman/8.0/en/values.html
 valuesStatement:
-    VALUES expressionsWithDefaults? (',' expressionsWithDefaults?)*
+    VALUES rowConstructor (',' rowConstructor)* (ORDER BY orderByClause)? 
+    (LIMIT limitClauseAtom)?
+;
+
+rowConstructor:
+    ROW expressionsWithDefaults
 ;
 
 // details

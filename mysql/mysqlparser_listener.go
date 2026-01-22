@@ -683,6 +683,9 @@ type MySqlParserListener interface {
 	// EnterValuesStatement is called when entering the valuesStatement production.
 	EnterValuesStatement(c *ValuesStatementContext)
 
+	// EnterRowConstructor is called when entering the rowConstructor production.
+	EnterRowConstructor(c *RowConstructorContext)
+
 	// EnterInsertStatementValue is called when entering the insertStatementValue production.
 	EnterInsertStatementValue(c *InsertStatementValueContext)
 
@@ -2503,6 +2506,9 @@ type MySqlParserListener interface {
 
 	// ExitValuesStatement is called when exiting the valuesStatement production.
 	ExitValuesStatement(c *ValuesStatementContext)
+
+	// ExitRowConstructor is called when exiting the rowConstructor production.
+	ExitRowConstructor(c *RowConstructorContext)
 
 	// ExitInsertStatementValue is called when exiting the insertStatementValue production.
 	ExitInsertStatementValue(c *InsertStatementValueContext)

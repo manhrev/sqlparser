@@ -683,6 +683,9 @@ type MySqlParserVisitor interface {
 	// Visit a parse tree produced by MySqlParser#valuesStatement.
 	VisitValuesStatement(ctx *ValuesStatementContext) interface{}
 
+	// Visit a parse tree produced by MySqlParser#rowConstructor.
+	VisitRowConstructor(ctx *RowConstructorContext) interface{}
+
 	// Visit a parse tree produced by MySqlParser#insertStatementValue.
 	VisitInsertStatementValue(ctx *InsertStatementValueContext) interface{}
 
