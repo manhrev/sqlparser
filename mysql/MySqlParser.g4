@@ -860,7 +860,7 @@ updateStatement: singleUpdateStatement | multipleUpdateStatement;
 
 // https://dev.mysql.com/doc/refman/8.0/en/values.html
 valuesStatement:
-    VALUES rowConstructor (',' rowConstructor)* (ORDER BY orderByClause)? 
+    VALUES rowConstructor (',' rowConstructor)* orderByClause? 
     (LIMIT limitClauseAtom)?
 ;
 
